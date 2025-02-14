@@ -18,7 +18,7 @@ struct ContentView: View {
 
                                 Text(note.content)
                                     .font(.subheadline)
-                                    .foregroundColor(.secondary) // Light gray for subtle text
+                                    .foregroundColor(.secondary)
                                     .lineLimit(1)
                             }
                             .padding(.vertical, 5)
@@ -38,7 +38,7 @@ struct ContentView: View {
             .toolbar {
                 NavigationLink(destination: AddEditNoteView(viewModel: viewModel)) {
                     Image(systemName: "plus")
-                        .foregroundColor(.blue) // Blue icon for better visibility
+                        .foregroundColor(.blue)
                 }
             }
         }
