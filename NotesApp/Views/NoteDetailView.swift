@@ -10,12 +10,15 @@ struct NoteDetailView: View {
                 .font(.largeTitle)
                 .bold()
                 .foregroundColor(.primary)
+                .accessibilityLabel("Note Details Screen")
+                .accessibilityHint("Displays the details of the selected note")
             
             Text(note.title)
                 .font(.title2)
                 .bold()
                 .strikethrough(note.isCompleted, color: .gray)
                 .foregroundColor(note.isCompleted ? .gray : .primary)
+                .accessibilityLabel("Note Title")
 
             
             Divider()
@@ -23,7 +26,9 @@ struct NoteDetailView: View {
             
             Text(note.content)
                 .font(.body)
-                .foregroundColor(.primary) // Ensures visibility in all modes
+                .foregroundColor(.primary)
+                .accessibilityLabel("Note Content Screen")
+                .accessibilityHint("Displays the contents of the selected note")
 
             
             Spacer()

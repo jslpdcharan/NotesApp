@@ -22,6 +22,7 @@ struct AddEditNoteView: View {
         NavigationStack {
             Form {
                 TextField("Title", text: $title)
+                    .accessibilityLabel("Note Title")
                 TextEditor(text: $content)
                     .frame(height: 200)
             }

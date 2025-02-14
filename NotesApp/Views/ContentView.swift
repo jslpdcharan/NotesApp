@@ -15,11 +15,15 @@ struct ContentView: View {
                                     .bold()
                                     .foregroundColor(note.isCompleted ? .gray : .primary)
                                     .strikethrough(note.isCompleted, color: .gray)
+                                    .accessibilityLabel("Note Title Screen")
+                                    .accessibilityHint("Displays Title of the note")
 
                                 Text(note.content)
                                     .font(.subheadline)
                                     .foregroundColor(.secondary)
                                     .lineLimit(1)
+                                    .accessibilityLabel("Note Content Screen")
+                                    .accessibilityHint("Displays the one line content of the displayed note")
                             }
                             .padding(.vertical, 5)
                             
@@ -31,6 +35,7 @@ struct ContentView: View {
                             }
                         }
                     }
+                    
                 }
                 .onDelete(perform: viewModel.deleteNotes)
             }
